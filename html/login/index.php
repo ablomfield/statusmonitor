@@ -72,7 +72,7 @@ if (isset($_GET['code'])) {
     $orgjson = json_decode($orgdata);
     $_SESSION["orgname"] = $orgjson->displayName;
 
-    //header("Location: /");
+    header("Location: /");
 } else {
-    //header("Location: /");
+    header("Location: /");
 }
