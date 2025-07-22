@@ -21,20 +21,27 @@ include($_SERVER['DOCUMENT_ROOT'] . "/includes/settings.php");
 			<!-- Header -->
 <?php include($_SERVER['DOCUMENT_ROOT'] . "/includes/header.php"); ?>
 			<!-- Highlights -->
-				<section class="wrapper style1">
-					<div class="container">
-						<div class="row gtr-200">
-							<section class="col-6 col-12-narrower">
-								<div class="box highlight">
-									<i class="icon major solid fa-network-wired" style="text-decoration: none;"></i>
-									<h3><a href="/lgw">Local Gateway Config Generator</a></h3>
-									<p>The Local Gateway Config Generator will allow you to instantly build a configration for a Cisco Webex Calling Local Gateway by retrieving the trunk configuration directly from Control Hub and building a complete configuration for a registration based gateway.</p>
-								</div>
-							</section>
-						</div>
-					</div>
-				</section>
-
+<?php							
+if ($personid != "") {
+	// Show Status
+	echo("	<section class=\"wrapper style1\">\n");
+	echo("		<div class=\"container\">\n");
+	echo("			<div class=\"row gtr-200\">\n");
+	echo("          <p>You are logged in.</p>\n");
+	echo("			</div>\n");
+	echo("		</div>\n");
+	echo("	</section>\n");
+} else {
+	// Show Login Button
+	echo("	<section class=\"wrapper style1\">\n");
+	echo("		<div class=\"container\">\n");
+	echo("			<div class=\"row gtr-200\">\n");
+	echo("          <p>You are not logged in.</p>\n");
+	echo("			</div>\n");
+	echo("		</div>\n");
+	echo("	</section>\n");	
+}
+?>			 
 			<!-- Footer -->
 <?php include($_SERVER['DOCUMENT_ROOT'] . "/includes/footer.php"); ?>
 		</div>
