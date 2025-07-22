@@ -3,7 +3,6 @@ session_start();
 
 // Import Settings
 include($_SERVER['DOCUMENT_ROOT'] . "/includes/settings.php");
-include($_SERVER['DOCUMENT_ROOT'] . "/lgw/lgwsettings.php");
 
 if (isset($_GET['code'])) {
     // Retrieve Code
@@ -11,7 +10,7 @@ if (isset($_GET['code'])) {
     $oauth_state = $_GET['state'];
     $accessarr = array(
         'grant_type' => 'authorization_code',
-        'redirect_uri' => 'https://collabtoolbox.com/lgw/login',
+        'redirect_uri' => 'https://statusmonitor.collabtoolbox.com/login',
         'client_id' => $client_id,
         'client_secret' => $client_secret,
         'code' => $oauth_code
