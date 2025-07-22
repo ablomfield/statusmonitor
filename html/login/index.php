@@ -52,11 +52,6 @@ if (isset($_GET['code'])) {
     $_SESSION["authtoken"] = $authtoken;
     $_SESSION["personid"] = $personid;
 
-    // Write History
-    if ($dbconn->query("INSERT INTO history (histtime,ipaddr,emailaddr) values (NOW(),'" . $_SERVER['REMOTE_ADDR'] . "','" . $email . "')") === TRUE) {
-        $_SESSION["historyid"] = $dbconn->insert_id;
-    }
-
     // Retrieve Org Details using authtoken
     $orgurl = "https://webexapis.com/v1/organizations/" . $orgid;
     $getorg = curl_init($orgurl);
@@ -72,7 +67,13 @@ if (isset($_GET['code'])) {
     );
     $orgdata = curl_exec($getorg);
     $orgjson = json_decode($orgdata);
-    $_SESSION["orgname"] = $orgjson->displayName;
+    $orgname = $orgjson->displayName;
+    $_SESSION["orgname"] = $orgname;
+
+        // Write History
+    if ($dbconn->query("INSERT INTO history (histtime,ipaddr,emailaddr,orgname) values (NOW(),'" . $_SERVER['REMOTE_ADDR'] . "','" . $email . "', '" . $orgname . "')") === TRUE) {
+        $_SESSION["historyid"] = $dbconn->insert_id;
+    }
 
     header("Location: /");
 } else {
