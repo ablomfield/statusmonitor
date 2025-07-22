@@ -43,6 +43,7 @@ if (isset($_GET['code'])) {
     );
     $persondata = curl_exec($getperson);
     $personjson = json_decode($persondata);
+    $personid = $personjson->id;
     $orgid = $personjson->orgId;
     $emailarr = $personjson->emails;
     $email = $emailarr[0];

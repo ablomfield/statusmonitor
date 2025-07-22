@@ -24,9 +24,6 @@ $oauth_url = $rowsettings["oauth_url"];
 
 if (isset($_SESSION["personid"])) {
 	$personid = $_SESSION["personid"];
-  } elseif (isset($_COOKIE["personid"])) {
-	$personid = $_COOKIE["personid"];
-	$_SESSION["personid"] = $personid;
   } else {
 	$personid = "";
 }
