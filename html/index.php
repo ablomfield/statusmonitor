@@ -36,7 +36,7 @@ if ($personid != "") {
 	echo("	<section class=\"wrapper style1\">\n");
 	echo("		<div class=\"container\">\n");
 	echo("			<div class=\"row gtr-200\">\n");
-	echo("          <p>You are not logged in.</p>\n");
+	echo("          <p><button onclick=\"window.location.href='" . $oauth_url . "'\" class=\"button\">Sign In with Webex</button></p>\n");
 	echo("			</div>\n");
 	echo("		</div>\n");
 	echo("	</section>\n");	
