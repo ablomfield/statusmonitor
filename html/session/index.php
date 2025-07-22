@@ -29,7 +29,6 @@ include($_SERVER['DOCUMENT_ROOT'] . "/includes/settings.php");
     echo("			<pre>\n");
     var_dump($_SESSION);
     echo("			</pre>\n");
-	echo("          <p>You are logged in.</p>\n");
 	echo("			</div>\n");
 	echo("		</div>\n");
 	echo("	</section>\n");
