@@ -27,4 +27,10 @@ if (isset($_SESSION["personid"])) {
   } else {
 	$personid = "";
 }
+
+if (isset($_SESSION["devtype"])) {
+	$devtype = $_SESSION["devtype"];
+  } else {
+	$devtype = "";
+}
 ?>
