@@ -49,6 +49,7 @@ if (isset($_GET['code'])) {
     $_SESSION["displayname"] = $personjson->displayName;
     $_SESSION["orgid"] = $personjson->orgId;
     $_SESSION["authtoken"] = $authtoken;
+    $_SESSION["personid"] = $personid;
 
     // Write History
     if ($dbconn->query("INSERT INTO history (histtime,ipaddr,emailaddr) values (NOW(),'" . $_SERVER['REMOTE_ADDR'] . "','" . $email . "')") === TRUE) {
