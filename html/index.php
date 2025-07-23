@@ -36,6 +36,7 @@ include($_SERVER['DOCUMENT_ROOT'] . "/includes/settings.php");
 			} else {
 				include("types/select.php");
 			}
+			echo ("			<br>" . $devtype . "\n");
 			echo ("			</div>\n");
 			echo ("		</div>\n");
 			echo ("	</section>\n");
