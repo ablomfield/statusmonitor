@@ -1,9 +1,9 @@
 <?php
 
-if (isset($_REQUEST["type"])) {
-    $devtype = $_REQUEST["type"];
+if (isset($_POST["type"])) {
+    $devtype = $_POST["type"];
     $_SESSION["devtype"] = $devtype;
-    header("Location: /");
+    //header("Location: /");
 } else {
     header("Location: /");
 }
