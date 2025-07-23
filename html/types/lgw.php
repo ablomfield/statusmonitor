@@ -22,7 +22,7 @@ if (curl_errno($gettrunks) == "0") {
     for ($x = 0; $x < $trunkcount; $x++) {
         echo ("					      <tr>\n");
         echo ("					        <td>\n");
-        echo ("     					    <img src=\"/images/online.png\">\n");
+        echo ("     					    <img src=\"/images/status-green.png\">\n");
         echo ("					        </td>\n");
         echo ("					        <td>\n");
         echo ("					         " . $trunksjson->trunks[$x]->name . "\n");
