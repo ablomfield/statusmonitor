@@ -1,5 +1,5 @@
 <?php
-echo ("			<h1>Local Gateways</h1>\n");
+echo ("			<h1>Local Gateways</h1><br>\n");
 // Retrieve Trunk List
 $trunksurl = "https://webexapis.com/v1/telephony/config/premisePstn/trunks?orgId=$orgid";
 $gettrunks = curl_init($trunksurl);
