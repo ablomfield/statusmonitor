@@ -54,7 +54,7 @@ if (isset($_SESSION['authtoken'])) {
 			// Show Login Button
 			echo ("	<section class=\"wrapper style1\">\n");
 			echo ("		<div class=\"container\">\n");
-			echo ("			<div class=\"cta\">\n");
+			echo ("			<div class=\"row aln-center gtr-200\">\n");
 			echo ("          <p><button onclick=\"window.location.href='" . $oauth_url . "'\" class=\"button\">Sign In with Webex</button></p>\n");
 			echo ("			</div>\n");
 			echo ("		</div>\n");
