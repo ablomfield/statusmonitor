@@ -26,6 +26,9 @@ include($_SERVER['DOCUMENT_ROOT'] . "/includes/settings.php");
 		<?php
 		if ($personid != "") {
 			// Show Status
+			echo ("	<section class=\"wrapper style1\">\n");
+			echo ("		<div class=\"container\">\n");
+			echo ("			<div class=\"row gtr-200\">\n");
 			if ($devtype == "lgw") {
 				include("types/lgw.php");
 			} elseif ($devtype == "workspace") {
@@ -33,11 +36,6 @@ include($_SERVER['DOCUMENT_ROOT'] . "/includes/settings.php");
 			} else {
 				include("types/select.php");
 			}
-
-			echo ("	<section class=\"wrapper style1\">\n");
-			echo ("		<div class=\"container\">\n");
-			echo ("			<div class=\"row gtr-200\">\n");
-			echo ("          <p>You are logged in.</p>\n");
 			echo ("			</div>\n");
 			echo ("		</div>\n");
 			echo ("	</section>\n");
